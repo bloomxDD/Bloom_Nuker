@@ -24,10 +24,9 @@ webhook_names = ['Csgo on top', 'J4n0sch On Top']
 async def on_ready():
   await client.change_presence(activity=discord.Game(name= "made by J4n0sch || .gg/bugZDPxYbF"))#change this if you want
   print(f'''
-  
-░░▒██▌░▒▄▀█░ ▒██▄░▒█▌▒▄▀▀▄ ▒▄█▀▀█░▐█▀█░▐█░▐█
-▒▄▒▐█▌▒█▄▄█▄ ▒▐█▒█▒█░▒█▄▀█ ▒▀▀█▄▄░▐█──░▐████
-▒████▌░░░▒█░ ▒██░▒██▌▒▀▄▄▀ ▒█▄▄█▀░▐█▄█░▐█░▐█
+░▒█▀▀▄░█░░▄▀▀▄░▄▀▀▄░█▀▄▀█
+░▒█▀▀▄░█░░█░░█░█░░█░█░▀░█
+░▒█▄▄█░▀▀░░▀▀░░░▀▀░░▀░░▒▀
 
 \x1b[38;5;172mLogged In As {client.user}
 \x1b[38;5;172mType !help To Begin Nuking
