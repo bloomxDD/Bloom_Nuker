@@ -1,4 +1,4 @@
 @echo off
-title Made by J4n0sch
+title Made by Bloom
 
 python main.py
