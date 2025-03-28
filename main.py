@@ -4,6 +4,7 @@ import colorama
 import json
 import random
 import os
+from colorama import Fore
 from discord.ext import commands
 from discord import Permissions
 from discord import Webhook
