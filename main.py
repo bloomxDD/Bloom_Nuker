@@ -24,7 +24,7 @@ webhook_names = ['Csgo on top', 'Bloom On Top']
 @client.event
 async def on_ready():
   await client.change_presence(activity=discord.Game(name= "made by Bloom || .gg/bugZDPxYbF"))#change this if you want
-  print(f'''
+  print(Fore.CYAN + f'''
 ░▒█▀▀▄░█░░▄▀▀▄░▄▀▀▄░█▀▄▀█
 ░▒█▀▀▄░█░░█░░█░█░░█░█░▀░█
 ░▒█▄▄█░▀▀░░▀▀░░░▀▀░░▀░░▒▀
